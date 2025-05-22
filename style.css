@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c5811;
+  clip-path: circle(50% at bottom right);
+}
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo{
+  position: relative;
+  max-width: 500px;
+}
+header .navegation ul{
+  position: relative;
+  display: flex;
+}
+header .navegation li{
+  list-style: none;
+}
+header .navegation li a{
+  color: #0c5811;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 50px;
+  margin-left: 100px;
+}
+.container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .text{
+  position: relative;
+  max-width: 600px;
+  margin-right: 20px;
+}
+.container .text h2{
+  color: #0c5811;
+  font-size: 150%;
+  margin-bottom: 10px;
+  line-height: 5em;
+  font-weight: 700;
+  text-align: justify;
+}
+.container .text h2 span{
+  font-size: 3.5em;
+  color: #0c5811;
+}
+
+.container .text p{
+  color: #0c5811;
+  
+}
+.container .text a{
+  display: inline-block;
+  margin-top: 50px;
+  padding: 10px 25px;
+  background-color: #25883b;
+  color: #f4e3bd;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  transition: 0.3s ease-in-out;
+  
+}
+.container .text a:hover{
+  transform: translateY(-10px);
+}
+
+
+.icons {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  object-fit: contain;
+  
+  
+  
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease;
+  
+}
+
+.icons:hover {
+  transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(146, 61, 61, 0.15);
+
+}
+
+.icons li a img{
+  filter: invert(1);
+}
+.boxImg{
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+}
+.boxImg .img{
+  width: 800px;
+}
+
+
+.content {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+
+@keyframes fadeInUp {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }

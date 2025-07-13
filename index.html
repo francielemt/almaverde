@@ -1,62 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Alma Verde</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+    <title>Alma Verde - Esmeraldas e Conexão</title>
 </head>
 <body>
 
+    <header>
+        <a href="#home"><img src="site/img/logo.png" alt="Alma Verde Logo" class="logo"></a>
+        <nav class="navegation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#newsletter-form-section">Informações</a></li>
+                <li><a href="#contact-form-section">Contato</a></li>
+                <li><a href="#suggestions-form-section">Sugestões</a></li>
+                <li><a href="#signup-form-section">Cadastro</a></li>
+            </ul>
+        </nav>
 
-  <header>
-      <a href="#"><img src="https://francielemt.github.io/almaverde/logo.png" alt="logo" class="logo"></a>
-      <nav class="navegation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Newsletter</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+        <div class="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
-    <section>
+    <section id="home" class="hero-section">
+        <div class="circle"></div>
         <div class="container">
-
             <div class="text">
-            <h2>"Esmeraldas: A Beleza da Pedra Verde"</h2>
-            <p>As esmeraldas chama atenção pela cor verde intensa e brilho único. Símbolos de sabedoria e renovação desde o Egito Antigo, essas pedras preciosas pertencem à família dos berilos e devem sua coloração ao cromo e ao vanádio.</p>
-            <a href="#">VER PRODUTOS</a>
+                <h2>"Esmeraldas: A Beleza da Pedra Verde"</h2>
+                <p>As esmeraldas chamam atenção pela cor verde intensa e brilho único. Símbolos de sabedoria e renovação desde o Egito Antigo, essas pedras preciosas pertencem à família dos berilos e devem sua coloração ao cromo e ao vanádio.</p>
+                <a href="#products">VER PRODUTOS</a>
+            </div>
+            <div class="boxImg">
+                <img src="site/img/esmeralda.png" alt="Esmeralda Brilhante" class="img">
             </div>
         </div>
-
-        
-    <div class="content">
-    <div class="icons">
-      <a href=""><img src="https://francielemt.github.io/almaverde/FACEBOOK.png" alt="FACEBOOK"></a>
-    </div>
-
-    <div class="icons">
-      <a href=""><img src="https://francielemt.github.io/almaverde/X.jpg" alt="X"></a>
-    </div>
-
-    <div class="icons">
-      <a href="#"><img src="https://francielemt.github.io/almaverde/INSTAGRAM.jpg" alt="INSTAGRAM"></a>
-    </div>
-  </div>
-
-  <div>
-
-
-    
-    <div class="circle">
-        <div class="boxImg">
-          <img src="https://francielemt.github.io/almaverde/esmeralda.png" alt="" class="img">
+        <div class="social-icons">
+            <div class="icon-item">
+                <a href=""><img src="site/img/FACEBOOK.png" alt="FACEBOOK"></a>
+            </div>
+            <div class="icon-item">
+                <a href=""><img src="site/img/X.jpg" alt="X"></a>
+            </div>
+            <div class="icon-item">
+                <a href="#"><img src="site/img/INSTAGRAM.jpg" alt="INSTAGRAM"></a>
+            </div>
         </div>
-    </div>
-    </div>
     </section>
+
+    <section id="products" class="products-section">
+        <div class="container-products">
+            <h2>Nossos Produtos Exclusivos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="site/img/anel.jpeg" alt="Anel de Esmeralda">
+                    <h3>Anel Esmeralda Clássico</h3>
+                    <p>Um anel elegante com uma esmeralda lapidada.</p>
+                    <span>R$ 2.565,00</span>
+                    <button class="add-to-cart-btn" data-product-id="1">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <img src="site/img/colar.jpeg" alt="Colar de Esmeralda">
+                    <h3>Colar Gota Esmeralda</h3>
+                    <p>Colar delicado com pingente em formato de gota.</p>
+                    <span>R$ 3.280,00</span>
+                    <button class="add-to-cart-btn" data-product-id="2">Adicionar ao Carrinho</button>
+                </div>
+                 <div class="product-card">
+                    <img src="site/img/brinco.jpeg" alt="Brincos de Esmeralda">
+                    <h3>Brincos Stud Esmeralda</h3>
+                    <p>Par de brincos discretos e luxuosos.</p>
+                    <span>R$ 1.830,00</span>
+                    <button class="add-to-cart-btn" data-product-id="3">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form-section" class="form-section">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <form id="contactForm" class="styled-form">
+                <div class="form-group">
+                    <label for="contactName">Nome:</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                    <div class="error-message" id="contactNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                    <div class="error-message" id="contactEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMessage">Mensagem:</label>
+                    <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                    <div class="error-message" id="contactMessageError"></div>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div id="contactSuccessMessage" class="success-message"></div>
+        </div>
+    </section>
+
+    <section id="suggestions-form-section" class="form-section">
+        <div class="container">
+            <h2>Sua Sugestão É Valiosa!</h2>
+            <form id="suggestionsForm" class="styled-form">
+                <div class="form-group">
+                    <label for="suggestionName">Seu Nome (opcional):</label>
+                    <input type="text" id="suggestionName" name="suggestionName">
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestionEmail">Seu Email (opcional):</label>
+                    <input type="email" id="suggestionEmail" name="suggestionEmail">
+                    <div class="error-message" id="suggestionEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="suggestionMessage">Sua Sugestão:</label>
+                    <textarea id="suggestionMessage" name="suggestionMessage" rows="5" required></textarea>
+                    <div class="error-message" id="suggestionMessageError"></div>
+                </div>
+
+                <button type="submit">Enviar Sugestão</button>
+            </form>
+            <div id="suggestionSuccessMessage" class="success-message"></div>
+        </div>
+    </section>
+
+    <section id="newsletter-form-section" class="form-section">
+        <div class="container">
+            <h2>Inscreva-se para mais informações!</h2>
+            <p class="form-description">Receba novidades e ofertas exclusivas diretamente no seu email!</p>
+            <form id="newsletterForm" class="styled-form">
+                <div class="form-group">
+                    <label for="newsletterEmail">Email:</label>
+                    <input type="email" id="newsletterEmail" name="newsletterEmail" required>
+                    <div class="error-message" id="newsletterEmailError"></div>
+                </div>
+                <button type="submit">Inscrever-se</button>
+            </form>
+            <div id="newsletterSuccessMessage" class="success-message"></div>
+        </div>
+    </section>
+
+    <section id="signup-form-section" class="form-section">
+        <div class="container">
+            <h2>Crie sua Conta Alma Verde</h2>
+            <form id="signupForm" class="styled-form">
+                <div class="form-group">
+                    <label for="signupName">Nome Completo:</label>
+                    <input type="text" id="signupName" name="signupName" required>
+                    <div class="error-message" id="signupNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required>
+                    <div class="error-message" id="signupEmailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupPassword">Senha:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required minlength="6">
+                    <div class="error-message" id="signupPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirme a Senha:</label>
+                    <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" required>
+                    <div class="error-message" id="signupConfirmPasswordError"></div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                    <label for="termsAccepted">Eu aceito os <a href="#">Termos de Uso</a>.</label>
+                    <div class="error-message" id="termsAcceptedError"></div>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <div id="signupSuccessMessage" class="success-message"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Alma Verde. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
